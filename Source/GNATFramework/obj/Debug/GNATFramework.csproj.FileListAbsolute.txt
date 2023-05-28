@@ -1,0 +1,8 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\1.4\Assemblies\GNATFramework.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\Source\GNATFramework\obj\Debug\GNATFramework.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\Source\GNATFramework\obj\Debug\GNATFramework.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\Source\GNATFramework\obj\Debug\GNATFramework.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\1.4\Assemblies\GNATFramework.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\Source\GNATFramework\obj\Debug\GNATFramework.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\Source\GNATFramework\obj\Debug\GNATFramework.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\Source\GNATFramework\obj\Debug\GNATFramework.dll
