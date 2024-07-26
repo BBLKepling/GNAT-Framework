@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <GNAT_Settings>GNAT Framework</GNAT_Settings>
+  
+  <GNAT_NeoAmmo_Label>Reusable Ammo</GNAT_NeoAmmo_Label>
+  <GNAT_NeoAmmo_ToolTip>Allows patched weapons to spawn ammo on miss.</GNAT_NeoAmmo_ToolTip>
+
+  <GNAT_forbidNeoAmmo_Label>Forbid Ammo</GNAT_forbidNeoAmmo_Label>
+  <GNAT_forbidNeoAmmo_ToolTip>If spawned ammo should be forbidden.</GNAT_forbidNeoAmmo_ToolTip>
+
+</LanguageData>

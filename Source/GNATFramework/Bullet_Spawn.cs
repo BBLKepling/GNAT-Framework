@@ -27,7 +27,7 @@ namespace GNATFramework
             {
                 Thing thing = ThingMaker.MakeThing(thingDef);
                 thing.stackCount = count;
-                thing.SetForbidden(true, false);
+                thing.SetForbidden(GNATSettings.forbidNeoAmmo, false);
                 GenPlace.TryPlaceThing(thing, position, map, ThingPlaceMode.Near);
             }
         }

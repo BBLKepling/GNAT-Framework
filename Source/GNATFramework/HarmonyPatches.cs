@@ -6,31 +6,18 @@ using Verse;
 
 namespace GNATFramework
 {
-    [HarmonyPatch(typeof(PawnInventoryGenerator), nameof(GenerateInventoryFor))]
-    class Harmony_PawnInventoryGenerator_GenerateInventoryFor_Postfix
+    [HarmonyPatch(typeof(PawnWeaponGenerator), nameof(TryGenerateWeaponFor))]
+    class Harmony_PawnWeaponGenerator_TryGenerateWeaponFor_Postfix
     {
         [HarmonyPostfix]
-        public static void GenerateInventoryFor(Pawn p)
+        public static void TryGenerateWeaponFor(Pawn pawn)
         {
-            if (p?.equipment?.Primary?.def is null ||
-                p.inventory?.innerContainer is null ||
-                !p.equipment.Primary.def.HasModExtension<GenerateWithEquip>() ||
-                p.equipment.Primary.def.GetModExtension<GenerateWithEquip>().generateEquip.NullOrEmpty()
-                ) return;
-            foreach (ThingDefCountRangeClass item in p.equipment.Primary.def.GetModExtension<GenerateWithEquip>().generateEquip)
+            if (pawn?.inventory?.innerContainer is null || !(pawn.equipment?.Primary?.def?.GetModExtension<GenerateWithEquip>()?.generateEquip is List<ThingDefCountRangeClass> generateThis)) return;
+            foreach (ThingDefCountRangeClass item in generateThis)
             {
-                if (p.equipment.Primary.Stuff != null)
-                {
-                    Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? p.equipment.Primary.Stuff : null);
-                    thing.stackCount = item.countRange.RandomInRange;
-                    p.inventory.innerContainer.TryAdd(thing);
-                }
-                else
-                {
-                    Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? GenStuff.AllowedStuffsFor(item.thingDef).RandomElement() : null);
-                    thing.stackCount = item.countRange.RandomInRange;
-                    p.inventory.innerContainer.TryAdd(thing);
-                }
+                Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? pawn.equipment.Primary.Stuff ?? GenStuff.AllowedStuffsFor(item.thingDef).RandomElement() : null);
+                thing.stackCount = item.countRange.RandomInRange;
+                pawn.inventory.innerContainer.TryAdd(thing);
             }
         }
     }

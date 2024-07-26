@@ -6,6 +6,11 @@ namespace GNATFramework
     public class Verb_LaunchProjectileOneUse : Verb_LaunchProjectile
     {
         public static bool boolSS = ModLister.HasActiveModWithName("Simple sidearms");
+        public override void ExposeData()
+        {
+            Scribe_Values.Look(ref boolSS, "boolSS");
+            base.ExposeData();
+        }
         protected override bool TryCastShot()
         {
             if (base.TryCastShot())

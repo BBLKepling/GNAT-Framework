@@ -23,8 +23,8 @@ namespace GNATFramework
             Harmony harmonyInstance = new Harmony("BBLKepling.GNAT");
             if (features.Contains("generatewithequip"))
             {
-                MethodInfo original = AccessTools.Method(typeof(PawnInventoryGenerator), nameof(PawnInventoryGenerator.GenerateInventoryFor));
-                MethodInfo postfix = typeof(Harmony_PawnInventoryGenerator_GenerateInventoryFor_Postfix).GetMethod("GenerateInventoryFor");
+                MethodInfo original = AccessTools.Method(typeof(PawnWeaponGenerator), nameof(PawnWeaponGenerator.TryGenerateWeaponFor));
+                MethodInfo postfix = typeof(Harmony_PawnWeaponGenerator_TryGenerateWeaponFor_Postfix).GetMethod("TryGenerateWeaponFor");
                 Log.Message("[GNAT]Running GenerateWithEquip Patch");
                 harmonyInstance.Patch(original: original, postfix: new HarmonyMethod(postfix));
             }
