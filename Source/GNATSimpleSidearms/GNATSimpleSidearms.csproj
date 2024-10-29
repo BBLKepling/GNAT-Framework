@@ -40,7 +40,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="GNATFramework">
-      <HintPath>..\..\1.4\Assemblies\GNATFramework.dll</HintPath>
+      <HintPath>..\..\1.5\Assemblies\GNATFramework.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SimpleSidearms">

@@ -3,6 +3,9 @@
 
   <GNAT_Settings>GNAT Framework</GNAT_Settings>
   
+  <GNAT_LogSpam_Label>Start up Log Spam</GNAT_LogSpam_Label>
+  <GNAT_LogSpam_ToolTip>If you want to see start up log spam about Harmony patches.</GNAT_LogSpam_ToolTip>
+
   <GNAT_NeoAmmo_Label>Reusable Ammo</GNAT_NeoAmmo_Label>
   <GNAT_NeoAmmo_ToolTip>Allows patched weapons to spawn ammo on miss.</GNAT_NeoAmmo_ToolTip>
 

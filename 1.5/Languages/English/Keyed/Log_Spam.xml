@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <GNAT_Start_Up>[GNAT]Framework welcomes you with log spam, it's running these Harmony patches. You can turn this off in settings.</GNAT_Start_Up>
+  <GNAT_GenerateWithEquip>[GNAT]Running GenerateWithEquip patch</GNAT_GenerateWithEquip>
+  <GNAT_ShootOneUseInvCheck>[GNAT]Running ShootOneUseInvCheck patch</GNAT_ShootOneUseInvCheck>
+  <GNAT_ShootOneUseInvCheckSkip>[GNAT]Simple Sidearms detected, skipping ShootOneUseInvCheck patch</GNAT_ShootOneUseInvCheckSkip>
+  
+</LanguageData>

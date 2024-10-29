@@ -15,8 +15,8 @@ namespace GNATFramework
                 blockedByShield ||
                 !position.IsValid ||
                 def.projectile.preExplosionSpawnThingCount <= 0 ||
-                !Rand.Chance(def.projectile.preExplosionSpawnChance))
-                return;
+                !Rand.Chance(def.projectile.preExplosionSpawnChance)
+                ) return;
             ThingDef thingDef = def.projectile.preExplosionSpawnThingDef;
             int count = def.projectile.preExplosionSpawnThingCount;
             if (thingDef.IsFilth && position.Walkable(map))

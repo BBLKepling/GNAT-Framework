@@ -5,12 +5,6 @@ namespace GNATFramework
 {
     public class Verb_LaunchProjectileOneUse : Verb_LaunchProjectile
     {
-        public static bool boolSS = ModLister.HasActiveModWithName("Simple sidearms");
-        public override void ExposeData()
-        {
-            Scribe_Values.Look(ref boolSS, "boolSS");
-            base.ExposeData();
-        }
         protected override bool TryCastShot()
         {
             if (base.TryCastShot())
@@ -43,11 +37,11 @@ namespace GNATFramework
             {
                 EquipmentSource.Destroy();
             }
-            if (boolSS || !CasterIsPawn) return;
-            Pawn pawn = caster as Pawn;
-            if (pawn.equipment.GetDirectlyHeldThings().Any) return;
-            List<Thing> pawnInv = pawn.inventory?.innerContainer?.InnerListForReading;
-            if (pawnInv.NullOrEmpty()) return;
+            if (HarmonyInit.ssInstalled || 
+                !(caster is Pawn pawn) || 
+                pawn.equipment.GetDirectlyHeldThings().Any || 
+                !(pawn.inventory?.innerContainer?.InnerListForReading is List<Thing> pawnInv)
+                ) return;
             foreach (Thing thing in pawnInv)
                 if (thing.def == EquipmentSource.def)
                 {

@@ -12,7 +12,9 @@ namespace GNATFramework
         [HarmonyPostfix]
         public static void TryGenerateWeaponFor(Pawn pawn)
         {
-            if (pawn?.inventory?.innerContainer is null || !(pawn.equipment?.Primary?.def?.GetModExtension<GenerateWithEquip>()?.generateEquip is List<ThingDefCountRangeClass> generateThis)) return;
+            if (pawn?.inventory?.innerContainer is null || 
+                !(pawn.equipment?.Primary?.def?.GetModExtension<GenerateWithEquip>()?.generateEquip is List<ThingDefCountRangeClass> generateThis)
+                ) return;
             foreach (ThingDefCountRangeClass item in generateThis)
             {
                 Thing thing = ThingMaker.MakeThing(item.thingDef, GenStuff.AllowedStuffsFor(item.thingDef).Any() ? pawn.equipment.Primary.Stuff ?? GenStuff.AllowedStuffsFor(item.thingDef).RandomElement() : null);
@@ -27,30 +29,28 @@ namespace GNATFramework
         [HarmonyPostfix]
         public static void SelfConsume(Verb_ShootOneUse __instance)
         {
-            if (__instance.caster is Pawn pawn)
-            {
-                if (pawn.equipment.GetDirectlyHeldThings().Any) return;
-                List<Thing> pawnInv = pawn.inventory?.innerContainer?.InnerListForReading;
-                if (pawnInv.NullOrEmpty()) return;
-                foreach (Thing thing in pawnInv)
-                    if (thing.def == __instance.EquipmentSource.def)
-                    {
-                        pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
-                        return;
-                    }
-                foreach (Thing thing in pawnInv)
-                    if (thing.def.IsRangedWeapon)
-                    {
-                        pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
-                        return;
-                    }
-                foreach (Thing thing in pawnInv)
-                    if (thing.def.IsWeapon)
-                    {
-                        pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
-                        return;
-                    }
-            }
+            if (!(__instance.caster is Pawn pawn) || 
+                pawn.equipment.GetDirectlyHeldThings().Any || 
+                !(pawn.inventory?.innerContainer?.InnerListForReading is List<Thing> pawnInv)
+                ) return;
+            foreach (Thing thing in pawnInv)
+                if (thing.def == __instance.EquipmentSource.def)
+                {
+                    pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
+                    return;
+                }
+            foreach (Thing thing in pawnInv)
+                if (thing.def.IsRangedWeapon)
+                {
+                    pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
+                    return;
+                }
+            foreach (Thing thing in pawnInv)
+                if (thing.def.IsWeapon)
+                {
+                    pawn.inventory.innerContainer.TryTransferToContainer(thing, pawn.equipment.GetDirectlyHeldThings(), 1, false);
+                    return;
+                }
         }
     }
 }
