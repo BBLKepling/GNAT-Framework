@@ -1,0 +1,17 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\1.4\Simple_Sidearms\Assemblies\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Kepling's GNAT Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\1.4\Simple_Sidearms\Assemblies\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\1.5\Simple_Sidearms\Assemblies\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\1.5\Simple_Sidearms\Assemblies\GNATSimpleSidearms.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\1.5\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\1.5\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\1.5\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\GNAT-Framework\1.5\Source\GNATSimpleSidearms\obj\Debug\GNATSimpleSidearms.pdb
